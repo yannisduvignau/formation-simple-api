@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPO_URL = credentials('GIT_REPO_URL')
+        GIT_REPO_URL = "https://github.com/yannisduvignau/formation-simple-api/"
         MAVEN_OPTS_BUILD = 'clean package -DskipTests'
         MAVEN_OPTS_TEST = '-Dmaven.test.failure.ignore=true test'
     }
