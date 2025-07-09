@@ -17,13 +17,12 @@ pipeline {
                 git "${GIT_REPO_URL}"
             }
         }
+
         stage('Build') {
             steps {
                 sh "mvn ${MAVEN_OPTS_BUILD}"
                 sh "mvn ${MAVEN_OPTS_TEST}"
             }
-        }
-        stage('Success') {
             post {
                 success {
                     junit '**/target/surefire-reports/TEST-*.xml'
