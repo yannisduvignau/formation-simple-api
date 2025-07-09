@@ -29,7 +29,7 @@ pipeline {
                     archiveArtifacts 'target/*.jar'
                 }
                 failure {
-                    echo 'Build failed!'
+                    echo 'Build failed !'
                 }
             }
         }
@@ -46,7 +46,7 @@ pipeline {
                     junit '**/target/surefire-reports/TEST-*.xml'
                 }
                 failure {
-                    echo 'Tests failed!'
+                    echo 'Tests failed !'
                 }
             }
         }
@@ -61,10 +61,10 @@ pipeline {
             }
             post {
                 success {
-                    echo 'Deployment successful!'
+                    echo 'Deployment successful !'
                 }
                 failure {
-                    echo 'Deployment failed!'
+                    echo 'Deployment failed !'
                 }
             }
         }
